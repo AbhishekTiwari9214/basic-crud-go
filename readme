@@ -1,0 +1,118 @@
+## 📚 CRUD API in Go with MongoDB
+
+### 📖 Project Description
+
+This project is a **RESTful API** built using **Golang**, implementing **CRUD (Create, Read, Update, Delete)** operations for a `Book` resource.  
+It follows a **production-ready folder structure** with proper separation of concerns: routes, controllers, logic, models, utils, and config.
+
+Instead of using in-memory storage, it connects to a **MongoDB** database for **persistent** storage of data.
+
+The API uses:
+- **Gorilla mux** for routing
+- **Official MongoDB Go Driver** for database operations
+- **Clean architecture principles** for better scalability and maintainability
+
+---
+
+### 🛠 Technologies and Concepts Used
+
+- **Golang** — programming language
+- **MongoDB** — database
+- **Gorilla/mux** — HTTP router and URL matcher
+- **MongoDB Go Driver** — official Go driver for MongoDB
+- **RESTful API principles** — CRUD operations
+- **Clean project structure** — routes, controllers, logic, models, utils
+- **JSON and BSON** — data serialization for HTTP and MongoDB
+- **Context Management** — handling database requests
+
+---
+
+### 📚 What You Will Learn
+
+- Setting up a REST API server with Go
+- Designing clean and modular project structures
+- Connecting and interacting with MongoDB from Go
+- Handling HTTP methods: POST, GET, PUT, DELETE
+- Creating reusable response utilities
+- Structuring Go projects for real-world backend development
+- Using environment variables for DB connections (optional enhancement)
+- Error handling and concurrency concepts
+
+---
+
+### 🏗 Folder Structure
+
+```
+crud-api/
+├── main.go                  # Application entry point
+├── config/
+│   └── db.go                 # MongoDB connection setup
+├── routes/
+│   └── book_routes.go        # Route definitions for Book resource
+├── controllers/
+│   └── book_controller.go    # HTTP handlers
+├── logic/
+│   └── book_logic.go         # Business logic and DB operations
+├── models/
+│   └── book.go               # Book data model
+├── utils/
+│   └── response.go           # Utility functions for API responses
+├── go.mod                    # Go module file
+└── go.sum                    # Go dependency checksums
+```
+
+---
+
+### 🗓 Database
+
+- **Database**: MongoDB
+- **Local Connection String**: `mongodb://localhost:27017`
+- **Database Name**: `cruddb`
+- **Collection Name**: `books`
+
+---
+
+### 🚀 How to Run This Project
+
+1. **Install dependencies**:
+   ```bash
+   go mod tidy
+   ```
+
+2. **Make sure MongoDB is running** locally.
+
+3. **Run the application**:
+   ```bash
+   go run main.go
+   ```
+
+4. **API will be live** on:
+   ```
+   http://localhost:8080
+   ```
+
+---
+
+### 📬 API Endpoints
+
+| Method | Endpoint | Description |
+|:------|:---------|:------------|
+| POST | `/books` | Create a new book |
+| GET | `/books` | Get all books |
+| GET | `/books/{id}` | Get a book by ID |
+| PUT | `/books/{id}` | Update a book by ID |
+| DELETE | `/books/{id}` | Delete a book by ID |
+
+---
+
+### ✅ Future Enhancements (optional)
+
+- Add pagination for list endpoints
+- Use environment variables for DB URI and port
+- Add JWT authentication
+- Implement logging middleware
+- Add unit testing and integration testing
+
+---
+
+## 🚀 Happy Coding! 🚀
