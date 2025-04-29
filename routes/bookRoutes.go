@@ -7,4 +7,5 @@ import (
 
 func BookRoutes(r *mux.Router){
 	r.HandleFunc("/book",book.CreateBookHandler).Methods("POST")
+	r.HandleFunc("/book/{id}",book.GetBookInfoHandler).Methods("GET")
 }
